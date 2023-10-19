@@ -1,0 +1,217 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'iLayout — Platform for relayout assets like a professional',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Try it free!',
+        href: 'https://github.com/onwidget/astrowind',
+        target: '_blank',
+        // icon: 'tabler:download',
+
+      },
+      {text: 'Learn more', href: '#features'},
+    ]}
+    image={{src: '~/assets/images/layout.png', alt: 'iLayout Hero Image'}}
+  >
+    <Fragment slot="title">
+      Platform for relayout assets like a <span class="text-accent dark:text-white highlight"> professional</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">iLayout</span> help you to do the adaptation for images and videos to any screen size
+        for any purposes with lightning speed.</span
+      >
+      <!--<span class="block mb-1 sm:hidden font-bold text-blue-600">iLayout: Production-ready.</span>-->
+      <span class="hidden sm:inline">
+      <br/>iLayout clear the gap between designs and real life use cases.
+      <br/>We support you to relayout your design and get your results in shortest time by offering many smart algorithms, and 
+      a design library can help you with your design  
+      </span>
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note/>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Features"
+    title="What you get with iLayout"
+    subtitle="One of the most professional and comprehensive toolkits currently offered on the market. "
+    items={[
+      {
+        title: 'Easy-to-use Editor',
+        description:
+          'A handful and easy-to-use flow offer high productivity, performance and versatility.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Ready-to-use Components',
+        description:
+          'Components made our experienced professional ready to be used at any level',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Best Practices',
+        description:
+          'Creating secure, efficient, and user-friendly products that deliver exceptional experiences and lasting value.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Excellent Rendering Speed',
+        description:
+          'Having a good rendering speed impacts your performance, improves user experience (UI/UX) and increase conversion rates.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'AI Assistant',
+        description:
+          "Being future-proof with our professional AI trained with best practices from all over the world.",
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Open to new ideas and contributions',
+        description:
+          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Get your products adaptation with any sizes with iLayout."
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Prepare your assets</span>',
+        description:
+          "Design and prepare your assets package!",
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Do the re-layouting</em>',
+        description:
+          "Align and choose how your components will be scaled.",
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Preview your results</span>',
+        description:
+          'Preview and do your adjustments any time.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Hit the button for Generating!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Steps>
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Dive into the following questions to gain insights into the powerful features that iLayout offers and how it can elevate your web development journey."
+    tagline="FAQs"
+    classes={{container: 'max-w-6xl'}}
+    items={[
+      {
+        title: 'Why iLayout?',
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+      {
+        title: 'What do I need to start with?',
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+      {
+        title: 'How can I learn to use the platform?',
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+      {
+        title: "How can I access the community?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..",
+      },
+      {
+        title: 'How much will it cost?',
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..",
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      {title: 'Users', amount: '48.4K'},
+      {title: 'Loves', amount: '24.8K'},
+      {title: 'Donates', amount: '10.3K'},
+      {title: 'Downloads', amount: '132K'},
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Stats>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get template',
+        href: 'https://github.com/onwidget/astrowind',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      iLayout Platform
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Don't way any more before trying out what we can offer!
+    </Fragment>
+  </CallToAction>
+</Layout>
