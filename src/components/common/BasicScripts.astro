@@ -6,8 +6,12 @@ import { UI } from '~/utils/config';
   function applyTheme(theme) {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
+      document.getElementById('logo-black').style.display = "inline";
+      document.getElementById('logo-white').style.display = "none";
     } else {
       document.documentElement.classList.remove('dark');
+      document.getElementById('logo-white').style.display = "inline";
+      document.getElementById('logo-black').style.display = "none";
     }
   }
 
@@ -61,6 +65,13 @@ import { UI } from '~/utils/config';
       }
       document.documentElement.classList.toggle('dark');
       localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+      if (localStorage.theme === 'dark') {
+        document.getElementById('logo-black').style.display = "inline";
+        document.getElementById('logo-white').style.display = "none";
+      } else {
+        document.getElementById('logo-white').style.display = "inline";
+        document.getElementById('logo-black').style.display = "none";
+      }
     });
 
     attachEvent('[data-aw-social-share]', 'click', function (_, elem) {
