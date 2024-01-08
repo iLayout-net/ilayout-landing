@@ -1,0 +1,17 @@
+---
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import {useShortAnswerInput} from "react-google-forms-hooks";
+
+const {
+  register, label = useShortAnswerInput('id')
+} = Astro.props as FormShortAnswerInput
+---
+
+<WidgetWrapper>
+  <div>
+    <p>{label} < /p>
+      <input type='text'
+             {...register()}
+      />
+  </div>
+</WidgetWrapper>

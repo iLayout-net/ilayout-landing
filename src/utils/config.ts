@@ -2,8 +2,7 @@ import fs from 'fs';
 import yaml from 'js-yaml';
 import merge from 'lodash.merge';
 
-import type { MetaData } from '~/types';
-
+import type {MetaData} from '~/types';
 export interface SiteConfig {
   name: string;
   site?: string;
@@ -11,17 +10,20 @@ export interface SiteConfig {
   trailingSlash?: boolean;
   googleSiteVerificationId?: string;
 }
+
 export interface MetaDataConfig extends Omit<MetaData, 'title'> {
   title?: {
     default: string;
     template: string;
   };
 }
+
 export interface I18NConfig {
   language: string;
   textDirection: string;
   dateFormatter?: Intl.DateTimeFormat;
 }
+
 export interface AppBlogConfig {
   isEnabled: boolean;
   postsPerPage: number;
@@ -58,6 +60,7 @@ export interface AppBlogConfig {
     };
   };
 }
+
 export interface AnalyticsConfig {
   vendors: {
     googleAnalytics: {

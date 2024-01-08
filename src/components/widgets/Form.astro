@@ -1,0 +1,56 @@
+---
+import Headline from '~/components/ui/Headline.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Button from '~/components/ui/Button.astro';
+import Image from '~/components/common/Image.astro';
+import type {Testimonials} from '~/types';
+import {useGoogleForm, useShortAnswerInput} from "react-google-forms-hooks";
+
+import {googleFormsToJson} from 'react-google-forms-hooks';
+
+// can use both full and shortened form url
+const result = await googleFormsToJson(
+  'https://docs.google.com/forms/d/e/1FAIpQLSdVYzEZFKmedTLw-L5JdI9ZAnMxcvq4587HL3dBv18OQhAUCw/viewform'
+)
+
+console.log("oke", result.fields)
+// will output the form fields in an appropriate structure
+// [
+//   {
+//     label: 'Do you want to give some feedback?',
+//     type: 'LONG_ANSWER',
+//     id: '1864908950',
+//     required: false
+//   },
+//   ...
+// ]
+
+
+export default function ShortAnswerInput({id}) {
+  const {register, label} = useShortAnswerInput(id)
+
+  return (
+    
+)
+}
+
+const {
+  title = '',
+  methods = useGoogleForm({form: result}),
+  onSubmit = async (data) => {
+    await methods.submitToGoogleForms(data)
+  }
+} = Astro.props as Testimonials;
+---
+
+<WidgetWrapper>
+  <div>
+    <p>{label} < /p>
+      < input
+      type = 'text'
+      {...
+        register()
+      }
+      />
+      < /div>
+</WidgetWrapper>

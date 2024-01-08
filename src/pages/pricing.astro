@@ -28,22 +28,22 @@ const metadata = {
     subtitle="Only pay for what you need"
     prices={[
       {
-        title: 'basic',
-        subtitle: 'Optimal choice for personal use',
-        price: 29,
+        title: 'free',
+        subtitle: 'Easy for exploring features',
+        price: "0",
         period: 'per month',
         items: [
           {
-            description: 'Etiam in libero, et volutpat',
+            description: 'Personal use',
           },
           {
-            description: 'Aenean ac nunc dolor tristique',
+            description: '10 credits/month',
           },
           {
-            description: 'Cras scelerisque accumsan lib',
+            description: '100MB storage included',
           },
           {
-            description: 'In hac habitasse',
+            description: 'No extra credits',
           },
         ],
         callToAction: {
@@ -53,25 +53,47 @@ const metadata = {
         },
       },
       {
-        title: 'standard',
-        subtitle: 'Optimal choice for small teams',
-        price: 69,
-        period: 'Per Month',
+        title: 'pro',
+        subtitle: 'Optimal choice for personal use',
+        price: 29,
+        period: 'per month',
         items: [
           {
-            description: 'Proin vel laoreet',
+            description: 'Personal use',
           },
           {
-            description: 'Ut efficitur habitasse egestas',
+            description: '100 credits/month',
           },
           {
-            description: 'Volutpat hac curabitur',
+            description: '10GB storage included',
           },
           {
-            description: 'Pellentesque blandit ut nibh',
+            description: '0.29$ per extra credits',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: '#',
+        },
+      },
+      {
+        title: 'premium',
+        subtitle: 'Optimal choice for personal use',
+        price: 39,
+        period: 'per month',
+        items: [
+          {
+            description: 'Personal use',
           },
           {
-            description: 'Donec fringilla sem',
+            description: '200 credits/month',
+          },
+          {
+            description: '15GB storage included',
+          },
+          {
+            description: '0.195$ per extra credits',
           },
         ],
         callToAction: {
@@ -83,28 +105,53 @@ const metadata = {
         ribbonTitle: 'popular',
       },
       {
-        title: 'premium',
-        subtitle: 'Optimal choice for companies',
-        price: 199,
-        period: 'Per Month',
+        title: 'team',
+        subtitle: 'Optimal choice for team use',
+        price: 49,
+        period: 'per month',
         items: [
           {
-            description: 'Curabitur suscipit risus',
+            description: '5 users per team',
           },
           {
-            description: 'Aliquam habitasse malesuada',
+            description: '300 credits/month',
           },
           {
-            description: 'Suspendisse sit amet blandit',
+            description: '20GB storage included',
           },
           {
-            description: 'Suspendisse auctor blandit dui',
+            description: '0.163$ per extra credits',
           },
         ],
         callToAction: {
           target: '_blank',
           text: 'Get started',
           href: '#',
+        },
+      },
+      {
+        title: 'enterprise',
+        subtitle: 'Optimal choice for team use',
+        price: "~",
+        period: 'per month',
+        items: [
+          {
+            description: 'Custom users per team',
+          },
+          {
+            description: 'Custom credits/month',
+          },
+          {
+            description: 'Custom storage included',
+          },
+          {
+            description: 'Custom per extra credits',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Contact us',
+          href: 'mailto:support@ilayout.net',
         },
       },
     ]}
@@ -183,7 +230,7 @@ const metadata = {
         icon: 'tabler:number-6',
       },
       {
-        title: 'Download and start using the template(s)',
+        title: 'Start exploring world of image adaptation',
         icon: 'tabler:number-7',
       },
     ]}
