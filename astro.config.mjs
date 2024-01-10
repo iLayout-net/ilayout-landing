@@ -14,6 +14,7 @@ import tasks from './src/utils/tasks';
 import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
 
 import { ANALYTICS, SITE } from './src/utils/config.ts';
+import NetlifyCMS from "astro-netlify-cms";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -53,7 +54,34 @@ export default defineConfig({
         ],
       },
     }),
-
+    NetlifyCMS({
+      config: {
+        backend: {
+          name: 'git-gateway',
+          branch: 'main',
+        },
+        collections: [
+          {
+            name: 'posts',
+            label: 'Blog Posts',
+            folder: 'src/content/post',
+            create: true,
+            delete: true,
+            fields: [
+              // {label: "Layout", name: "layout", widget: "hidden", default: "~/layouts/MarkdownLayout.astro"},
+              { name: 'publishDate', widget: 'datetime', label: 'Post Date' },
+              { name: 'title', widget: 'string', label: 'Post Title' },
+              { name: 'excerpt', widget: 'string', label: 'Post Excerpt' },
+              { name: 'image', widget: 'image', label: 'Post Image', choose_url: false },
+              { name: 'category', widget: 'string', label: 'Post Category', default: 'Blog' },
+              { name: 'tags', widget: 'list', label: 'Post Tags', default: ['blog'] },
+              { name: 'body', widget: 'markdown', label: 'Post Body' },
+              
+            ],
+          },
+        ],
+      },
+    }),
     ...whenExternalScripts(() =>
       partytown({
         config: { forward: ['dataLayer.push'] },
