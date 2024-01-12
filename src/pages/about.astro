@@ -2,6 +2,7 @@
 import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
+import Hero3 from '~/components/widgets/Hero3.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
@@ -29,12 +30,62 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      Peter is a highly experienced Art Director specializing in relayout work for film posters and app screenshots. 
-      With 12 years in the field, he has a proven track record of transforming cinematic visuals and optimizing app interfaces for enhanced user experiences. 
-      Known for his creative vision and strategic approach, Peter is a sought-after professional in the dynamic realms of film promotion and digital design.
+      <p>
+        A highly experienced Art Director specializing in re-layout work for film posters and app screenshots.<br/>
+        With 12 years in the field, he has a proven track record of transforming cinematic visuals and optimizing app
+        interfaces for enhanced user experiences.<br/>
+        Known for his creative vision and strategic approach,<strong> Peter </strong> is a sought-after professional in
+        the dynamic realms
+        of film promotion and digital design.
+      </p>
     </Fragment>
   </Hero2>
 
+  <Hero3
+    tagline="The team"
+    image={{
+      src: '~/assets/images/webmaster.jpg',
+      alt: 'Web master',
+      height: 576,
+      width: 576,
+    }}
+  >
+    <Fragment slot="title">
+      Meet our Web master <br/>
+      <span class="text-accent dark:text-white highlight">16 years in UI/UX Optimization</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <p>
+        16-year web veteran <strong>Nam Bui</strong> isn't just a webmaster, he's a pixel architect. Leading our Flutter
+        charge, he
+        crafts dazzling interfaces and solves problems with code-fueled magic. Every click, an effortless delight.
+      </p>
+    </Fragment>
+  </Hero3>
+
+  <Hero2
+    tagline="The team"
+    image={{
+      src: '~/assets/images/coder.JPG',
+      alt: 'Coder Image',
+      height: 576,
+      width: 576,
+    }}
+  >
+    <Fragment slot="title">
+      Meet our Backend Engineer <br/>
+      <span class="text-accent dark:text-white highlight">our innovation in Computer Vision</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <p>
+        A seasoned Go engineer by day, a CV researcher by night, <strong>Tai</strong> seamlessly bridges the gap between code and
+        cutting-edge vision. He crafts robust microservices with the precision of a master carpenter, then dives into
+        image recognition & AI, pushing the boundaries of what's possible. 
+      </p>
+    </Fragment>
+  </Hero2>
   <!-- Stats Widget ****************** -->
 
   <!--<Stats-->
